@@ -11,7 +11,11 @@ module.exports = React.createClass({
         <Nav>
           {this.props.navigation.map(function(item) {
             return (
-              <NavItem key={item.id} eventKey={item.id} href={'#' + item.route} active={item.route === this.props.selected}>
+              <NavItem 
+                key={item.id} 
+                eventKey={item.id} 
+                href={'#' + item.path} 
+                active={item.path === this.props.selected}>
                 {item.display}
               </NavItem>
             );

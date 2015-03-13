@@ -7,7 +7,7 @@ module.exports = React.createClass({
     return (     
       <div>
         <Menu navigation={this.props.navigation} selected={this.props.selected} />
-        <View />
+        <View id={this.props.parameters} />
       </div>
     );
   }

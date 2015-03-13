@@ -5,6 +5,7 @@ module.exports = React.createClass({
     return (
       <div className="starter-template">
         <h3>View 2</h3>
+        {this.props.id}
       </div>
     );
   }
