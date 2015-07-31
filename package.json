@@ -4,11 +4,11 @@
   "description": "A basic starting template for a react.js app that uses bootstrap components, a simple data driven ui router and menu component, along with a build system",
   "main": "",
   "scripts": {
-    "build": "./node_modules/.bin/browserify -t reactify src/App.jsx > build/bundle.js",
+    "build": "browserify -t reactify src/App.jsx > build/bundle.js",
     "watch": "nodemon --exec npm run build -e jsx"
   },
-  "author": "",
-  "license": "BSD-2-Clause",
+  "author": "John Ritsema",
+  "license": "MIT",
   "dependencies": {
     "react": "^0.12.2",
     "react-bootstrap": "^0.14.0"    
