@@ -4,7 +4,8 @@
   "description": "A basic starting template for a react.js app that uses bootstrap components, a simple data driven ui router and menu component, along with a build system",
   "main": "",
   "scripts": {
-    "build": "browserify -t reactify src/App.jsx > build/bundle.js",
+    "build": "browserify src/App.jsx > public/bundle.js",
+    "build-prod": "NODE_ENV=production browserify src/App.jsx | uglifyjs -cm > public/bundle.js",
     "watch": "nodemon --exec npm run build -e jsx"
   },
   "author": "John Ritsema",
@@ -15,7 +16,13 @@
   },
   "devDependencies": {
     "browserify": "^8.1.3",
+    "babelify": "^6.1.3",    
     "nodemon": "^1.4.0",
-    "reactify": "^1.0.0"
-  }
+    "uglify-js": "^2.4.24"    
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  }  
 }
