@@ -1,8 +1,7 @@
-var React = require('react');
-var Navigator = require('./Navigator.jsx');
-
-var Page1 = require('./Page1/index.jsx');
-var Page2 = require('./Page2/index.jsx');
+import React from 'react'
+import Navigator from './Navigator.jsx'
+import Page1 from './Page1/index.jsx'
+import Page2 from './Page2/index.jsx'
 
 //this navigation is used for configuring both the menu and the routing
 var navigation = [

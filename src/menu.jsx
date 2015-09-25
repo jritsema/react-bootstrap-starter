@@ -1,11 +1,11 @@
-var React = require('react');
-var Bootstrap = require('react-bootstrap');
-var Navbar = Bootstrap.Navbar;
-var Nav = Bootstrap.Nav;
-var NavItem = Bootstrap.NavItem;
+import React from 'react'
+import Navbar from 'react-bootstrap/lib/Navbar'
+import Nav from 'react-bootstrap/lib/Nav'
+import NavItem from 'react-bootstrap/lib/NavItem'
 
-module.exports = React.createClass({
-  render: function() {
+export default class Menu extends React.Component {
+
+  render () {
     return (
       <Navbar brand="React Bootstrap App">
         <Nav>
@@ -24,4 +24,4 @@ module.exports = React.createClass({
       </Navbar>
     );
   }
-});
+}

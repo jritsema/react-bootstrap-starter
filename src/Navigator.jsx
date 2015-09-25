@@ -1,10 +1,11 @@
-module.exports = (function () {
-  'use strict';
+import React from 'react'
+import Router from './router.jsx'
 
-  var React = require('react');
-  var Router = require('./router.jsx');
+export default (function () {
 
   var navigation;
+  //var router = new Router();
+  var router = Router;
 
   function renderNav(item, params) {
     React.render(
@@ -25,11 +26,11 @@ module.exports = (function () {
     navigation = nav;
 
     //hook up route handlers
-    Router.addRoute('', getRouteHandler(0));
+    router.addRoute('', getRouteHandler(0));
     for (var i in navigation)
-      Router.addRoute(navigation[i].route, getRouteHandler(i));
+      router.addRoute(navigation[i].route, getRouteHandler(i));
 
-    Router.start();    
+    router.start();    
   }
 
   return {
